@@ -1,0 +1,23 @@
+---
+- name: Clone repo
+  hosts: all
+  become: false
+  
+
+  tasks:
+    - name: create workspace dir
+      file:
+        path: "{{ directory }}/go/src"
+        state: directory
+        mode: 0755
+    - name: ensure clean app workspace
+      file:
+        path: "{{ path }}"
+        state: absent
+    - name: clone repo
+      git:
+        repo: "{{ repo }}"
+        dest: "{{ path }}"
+        version: "{{ branch }}"
+        refspec: "{{ refspec }}"
+      register: app_repo

@@ -3,8 +3,10 @@
   hosts: all
   become: true
   tasks:
+    - name: install java 
     - name: install maven
       yum:
+      get_url:?? 
         name: maven
         state: latest
         update_cache: true

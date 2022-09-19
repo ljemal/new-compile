@@ -4,9 +4,10 @@
   become: true
   tasks:
     - name: install java 
+      yum:
+        name: java-1.8.0-openjdk
     - name: install maven
       yum:
-      get_url:?? 
         name: maven
         state: latest
         update_cache: true

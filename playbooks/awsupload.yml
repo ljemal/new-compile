@@ -2,6 +2,8 @@
 - name: aws s3 upload
   hosts: all
   become: true
+  collections:
+    - amazon.aws
   tasks:
     
     - name: upload file to s3 bucket

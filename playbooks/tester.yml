@@ -5,4 +5,5 @@
   tasks:
   
     - name: test jar file
-      command: mvn test
+      command: mvn test -f "{{ app_directory }}"
+      

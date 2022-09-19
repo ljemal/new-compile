@@ -4,4 +4,4 @@
   become: true
   tasks:
     - name: install first artifact
-      command: maven package
+      command: mvn package

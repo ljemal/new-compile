@@ -1,0 +1,11 @@
+---
+- name: install maven
+  hosts: all
+  become: true
+  tasks:
+    - name: install maven
+      yum:
+        name: maven
+        state: latest
+        update_cache: true
+        valid_time: 3600

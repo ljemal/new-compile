@@ -10,12 +10,12 @@
         mode: 0755
     - name: ensure clean app workspace
       file:
-        path: "{{ app_path }}"
+        path: "{{ app_directory }}"
         state: absent
     - name: clone repo
       git:
         repo: "{{ repo }}" //repo for src (this repo)
-        dest: "{{ app_path }}"
+        dest: "{{ app_directory }}"
         version: "{{ branch }}"
         refspec: "{{ refspec }}"
       register: app_repo

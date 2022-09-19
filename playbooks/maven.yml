@@ -10,5 +10,4 @@
       yum:
         name: maven
         state: latest
-        update_cache: true
-        valid_time: 3600
+       

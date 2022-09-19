@@ -3,27 +3,11 @@
   hosts: all
   become: true
   tasks:
-    - name: list source and save to register
-      shell: "ls -lrt /path/to/jar file"
-      register: dirlist
-   
-    - name: save output to content var
-      set_fact:
-        content: "{{ dirlist.stdout_lines}}"
-      when: dirlist.changed
-
-    - name: display before writing
-      debug: msg="{{ content }}"
-
+    
     - name: upload file to s3 bucket
       amazon.aws.aws_s3:
-        profile:
-        bucket:
-        mode: 
-        object: ""
-        content: ""
-      register: putresult
-      OR
-      delete first tasks
-         src: path to jar file
-         
+        bucket: mybucket
+        object: compile.jar
+        src: ~/"{{ path_to_jar }}"
+        mode: put
+       

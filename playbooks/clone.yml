@@ -5,7 +5,7 @@
   tasks:
     - name: create workspace dir
       file:
-        path: "{{ app_directory }}/compile.jar"
+        path: "{{ app_directory }}"
         state: directory
         mode: 0755
     - name: ensure clean app workspace

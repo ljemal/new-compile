@@ -2,8 +2,6 @@
 - name: Clone repo
   hosts: all
   become: false
-  
-
   tasks:
     - name: create workspace dir
       file:

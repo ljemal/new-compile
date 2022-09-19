@@ -1,0 +1,3 @@
+---
+- name: install first artifact
+  command: mvn package -f "{{ app_directory }}"

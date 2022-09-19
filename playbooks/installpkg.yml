@@ -2,6 +2,5 @@
 - name: install artifacts
   hosts: all
   become: false
-  tasks:
-    - name: install first artifact
-      command: mvn package -f "{{ app_directory }}"
+  roles:
+    - ljemal.demos.packages

@@ -1,0 +1,17 @@
+---
+- name: create workspace dir
+  file:
+    path: "{{ app_directory }}"
+    state: directory
+    mode: 0755
+- name: ensure clean app workspace
+  file:
+    path: "{{ app_directory }}"
+    state: absent
+  
+- name: clone repo
+  git:
+    repo: "{{ repo }}" 
+    dest: "{{ app_directory }}"
+    version: "{{ branch }}"
+  register: app_repo

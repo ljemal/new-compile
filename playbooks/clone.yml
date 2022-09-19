@@ -14,8 +14,7 @@
         state: absent
     - name: clone repo
       git:
-        repo: "{{ repo }}" //repo for src (this repo)
+        repo: "{{ repo }}" 
         dest: "{{ app_directory }}"
         version: "{{ branch }}"
-        refspec: "{{ refspec }}"
       register: app_repo

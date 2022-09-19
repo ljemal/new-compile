@@ -4,4 +4,4 @@
   become: false
   tasks:
     - name: install first artifact
-      command: mvn package -f ~/"{{ app_directory }}"
+      command: mvn package -f "{{ app_directory }}"

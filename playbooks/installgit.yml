@@ -1,0 +1,6 @@
+---
+- name: install git
+  hosts: all
+  become: true
+  roles: 
+    - ljemal.demos.install_git

@@ -1,7 +1,8 @@
 ---
-- name: test
+- name: test jar file
   hosts: all
   become: false
   tasks:
+  
     - name: test jar file
       command: mvn test

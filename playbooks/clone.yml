@@ -5,17 +5,17 @@
   tasks:
     - name: create workspace dir
       file:
-        path: "{{ directory }}/go/src"
+        path: "{{ app_directory }}"
         state: directory
         mode: 0755
     - name: ensure clean app workspace
       file:
-        path: "{{ path }}"
+        path: "{{ app_directory }}"
         state: absent
+  
     - name: clone repo
       git:
-        repo: "{{ repo }}"
-        dest: "{{ path }}"
+        repo: "{{ repo }}" 
+        dest: "{{ app_directory }}"
         version: "{{ branch }}"
-        refspec: "{{ refspec }}"
       register: app_repo

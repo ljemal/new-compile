@@ -23,3 +23,7 @@
         object: ""
         content: ""
       register: putresult
+      OR
+      delete first tasks
+         src: path to jar file
+         

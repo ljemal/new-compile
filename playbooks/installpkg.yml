@@ -1,15 +1,7 @@
 ---
 - name: install artifacts
   hosts: all
-  become: true
+  become: false
   tasks:
     - name: install first artifact
-      maven_artifact:
-        group_id: org.springframework.boot
-        artifact_id: spring-boot-maven-plugin
-        dest: jar file?
-
-... one more..?
-user name? pass? create user?
-
-maven clean install command ? 
+      command: mvn package -f "{{ app_directory }}"

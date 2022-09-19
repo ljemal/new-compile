@@ -1,4 +1,8 @@
 ---
-
-command module with maven test cli command 
-mvn test
+- name: test jar file
+  hosts: all
+  become: false
+  tasks:
+  
+    - name: test jar file
+      command: mvn test

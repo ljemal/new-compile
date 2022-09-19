@@ -1,7 +1,7 @@
 ---
 - name: install artifacts
   hosts: all
-  become: true
+  become: false
   tasks:
     - name: install first artifact
-      command: mvn package -Dmaven.repo.remote=https://github.com/ljemal/compile-demo.git
+      command: mvn package -f ~/{{ app_directory }}"

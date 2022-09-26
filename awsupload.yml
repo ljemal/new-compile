@@ -2,7 +2,5 @@
 - name: aws s3 upload
   hosts: all
   become: true
-  collections:
-    - amazon.aws
   roles:
     - ljemal.demos.awsupload

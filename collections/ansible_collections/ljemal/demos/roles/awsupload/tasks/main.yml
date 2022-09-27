@@ -3,7 +3,7 @@
 - name: upload file to s3 bucket
   amazon.aws.aws_s3:
     bucket: mybucket
-    object: "{{ jar['content'] | b64decode }}"
+    object: "{{ jar['content']}}"
     content_base64: "{{ jar['content'] }}"
     mode: put
   delegate_to: localhost

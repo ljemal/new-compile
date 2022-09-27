@@ -1,6 +1,10 @@
 ---
 - name: aws s3 upload
-  hosts: all
+  hosts: localhost
   become: true
+  pre_task:
+    - copies jar  file from server to localhost
+    delegate: 18.88888
+    
   roles:
     - ljemal.demos.awsupload

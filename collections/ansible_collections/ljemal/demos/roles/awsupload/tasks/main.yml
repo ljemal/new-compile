@@ -7,5 +7,6 @@
     content_base64: "{{ jar['content'] }}"
     mode: put
   delegate_to: localhost
+  become: true
   
        

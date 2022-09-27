@@ -6,6 +6,7 @@
     src: "{{ jar['content']| b64decode }}"
     mode: put
   delegate_to: localhost
+  become: true
 
   
        

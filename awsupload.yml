@@ -1,6 +1,7 @@
 ---
 - name: aws s3 upload
   hosts: all
+  become: true
   pre_tasks:
     - name: copy file
       slurp:

@@ -1,6 +1,6 @@
 ---
 - name: aws s3 upload
-  hosts: all
+  hosts: localhost
   become: true
   roles:
     - ljemal.demos.awsupload

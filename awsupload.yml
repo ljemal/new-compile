@@ -3,8 +3,11 @@
   hosts: localhost
   become: true
   pre_task:
-    - copies jar  file from server to localhost
-    delegate: 18.88888
+    - name: copy jar file to localhost
+      synchronize:
+        src:
+        dest:
+      delegate_to: 
     
   roles:
     - ljemal.demos.awsupload

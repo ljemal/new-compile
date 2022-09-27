@@ -2,7 +2,6 @@
 - name: copy file from remote directory
   slurp:
     src: "{{ path_to_jar }}"
-  delegate_to: 18.222.13.15
   register: jar
 - name: upload file to s3 bucket
   amazon.aws.aws_s3:
@@ -10,5 +9,6 @@
     object: compile.jar
     src: jar
     mode: put
+  delegate_to: localhost
   
        

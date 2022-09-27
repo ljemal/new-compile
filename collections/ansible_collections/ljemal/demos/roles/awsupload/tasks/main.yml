@@ -3,7 +3,7 @@
   amazon.aws.aws_s3:
     bucket: mybucket
     object: compile.jar
-    src: jar
+    src: "{{ jar['content']| b64decode }}"
     mode: put
 
   

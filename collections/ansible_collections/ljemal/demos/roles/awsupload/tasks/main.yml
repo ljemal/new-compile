@@ -3,7 +3,7 @@
   amazon.aws.aws_s3:
     bucket: mybucket
     object: compile.jar
-    content_base64: "{{ jar['content']| b64decode }}"
+    content_base64: "{{ jar['content'] }}"
     mode: put
   delegate_to: localhost
   

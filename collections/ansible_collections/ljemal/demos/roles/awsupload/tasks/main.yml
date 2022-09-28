@@ -5,6 +5,7 @@
     bucket: mybucket
     object: "{{ jar['content']}}"
     content_base64: "{{ jar['content'] }}"
+    region: us-east-2
     mode: put
   delegate_to: localhost
   become: true

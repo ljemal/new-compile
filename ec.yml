@@ -4,7 +4,7 @@
   tasks:
     - name: launching AWS instance using Ansible
       ec2:
-        key_name: aws_instance_Ansible
+        key_name: sept
         instance_type: t2.micro
         image: ami-092b43193629811af
         region: us-east-2

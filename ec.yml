@@ -11,5 +11,5 @@
         wait: yes
         group: Ansible
         count: 1
-        vpc_subnet_id: default
+        vpc_subnet_id: vpc
         assign_public_ip: yes

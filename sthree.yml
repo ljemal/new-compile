@@ -1,0 +1,14 @@
+---
+- name: Create dummy object on S3
+  hosts: localhost
+  gather_facts: false
+  become: false
+
+  tasks:
+    - name: create some object on S3
+      amazon.aws.aws_s3:
+        bucket: bucketforcompile
+        object: test.txt
+        mode: put
+        content: "Hello World!"
+        permission: private

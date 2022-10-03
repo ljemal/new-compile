@@ -1,1 +1,17 @@
 ---
+- name: build app
+  hosts: all
+  become: false
+  vars:
+    app_directory: '~/apps'
+    testing_directory: 'apps'
+    repo: 'https://github.com/ljemal/compile-demo.git'
+    branch: 'main'
+    path_to_jar: /home/ec2-user/apps/target/gs-spring-boot-0.1.0.jar.original
+  roles:
+    - ljemal.demos.install_git
+    - ljemal.demos.clonerepo
+    - ljemal.demos.maven  
+    - ljemal.demos.packages
+    - ljemal.demos.tester 
+    - ljemal.demos.awsupload

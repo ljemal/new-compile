@@ -1,10 +1,5 @@
 ---
 - name: aws s3 upload
   hosts: all
-  pre_tasks:
-    - name: copy file
-      slurp:
-        src: "{{ path_to_jar }}"
-      register: jar
   roles:
     - ljemal.demos.awsupload

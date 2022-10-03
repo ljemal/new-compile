@@ -23,3 +23,6 @@
            assign_public_ip: yes
          name: "{{ instance_name }}"
       register: ec2
+    - name: wait for ssh
+      ansible.builtin.wait_for_connection:
+        timeout: 900

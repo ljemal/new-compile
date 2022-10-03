@@ -8,6 +8,7 @@
     security_group: default
     image: ami-092b43193629811af
     region: us-east-2
+    instance_name: instance
   tasks:
     - name: Launch instance
       amazon.aws.ec2:
@@ -19,4 +20,6 @@
          region: "{{ region }}"
          vpc_subnet_id: subnet-086194c049813830f
          assign_public_ip: yes
+         instance_tags:
+           Name: "{{ instance_name }}"
       register: ec2

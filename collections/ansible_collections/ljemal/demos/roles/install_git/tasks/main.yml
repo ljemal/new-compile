@@ -4,4 +4,4 @@
     name: git
     state: present
     update_cache: true
-    become: true
+  become: true

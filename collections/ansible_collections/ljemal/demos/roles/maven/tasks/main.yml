@@ -2,7 +2,7 @@
 - name: install java 
   yum:
     name: java-1.8.0-openjdk
-   become: true
+  become: true
 - name: install maven
   yum:
     name: maven

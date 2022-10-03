@@ -9,6 +9,6 @@
       amazon.aws.ec2:
         region: "{{ region }}"
         state: absent
-        filters:
-          tag:Name: "{{ instance_name }}"
+        instance_tags:
+          Name: "{{ instance_name }}"
         register: aws_instance_destroy

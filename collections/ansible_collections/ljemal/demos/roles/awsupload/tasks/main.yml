@@ -1,5 +1,8 @@
 ---
-
+- name: copy file
+      slurp:
+        src: "{{ path_to_jar }}"
+      register: jar
 - name: upload file to s3 bucket
   amazon.aws.aws_s3:
     bucket: bucketforcompile

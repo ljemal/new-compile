@@ -23,6 +23,12 @@
            assign_public_ip: yes
          name: "{{ instance_name }}"
       register: ec2
-    - name: wait for ssh
-      ansible.builtin.wait_for_connection:
+    - name: Wait 300 seconds for port 22 to become open and contain "OpenSSH"
+      ansible.builtin.wait_for:
+        port: 22
+        host: '{{ (ansible_ssh_host|default(ansible_host))|default(inventory_hostname) }}'
+        search_regex: OpenSSH
+        delay: 10
+      vars:
+        ansible_connection: local
        

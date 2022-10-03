@@ -1,6 +1,6 @@
 ---
 - name: Wait for ssh
-    ansible.builtin.wait_for_connection:
+  ansible.builtin.wait_for_connection:
       timeout: 900
 - name: install git
   yum:

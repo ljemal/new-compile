@@ -7,7 +7,7 @@
   tasks:
     - name: Terminate instances that were previously launched
       amazon.aws.ec2:
-        region: "{{ aws_region }}"
+        region: "{{ region }}"
         state: absent
         filters:
           tag:Name: "{{ instance_name }}"

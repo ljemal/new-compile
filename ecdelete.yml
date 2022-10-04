@@ -3,10 +3,6 @@
   gather_facts: False
   vars:
     region: us-east-2
-    instance_name: instance
-  pre_tasks:
-    - name: Wait for system to become reachable over SSH
-      ansible.builtin.wait_for_connection:
-        timeout: 900
+    instance_name: instance    
   roles:
     - ljemal.demos.deleteec

@@ -3,12 +3,21 @@
   hosts: all
   tasks:
   - name: waiting for server to be alive
-    wait_for:
-      state: started
-      port: 22
-      host: instance
-      delay: 10
-      timeout: 500
-      connect_timeout: 300
-      search_regex: OpenSSH
+    ansible.builtin.wait_for_connection:
+      timeout: 300
     delegate_to: localhost
+ait_for:
+8
+      state: started
+9
+      port: 22
+10
+      host: instance
+11
+      delay: 10
+12
+      timeout: 500
+13
+      connect_timeout: 300
+14
+      search_regex: OpenSSH

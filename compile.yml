@@ -13,8 +13,7 @@
     bucket_source: "{{ jar['content'] }}"
     region: 'us-east-2'
   pre_tasks:
-    - name: Wait for system to become reachable over SSH
-      ansible.builtin.wait_for_connection:
+    ansible.builtin.wait_for_connection:
         timeout: 900
       deleagate_to: localhost
   roles:

@@ -1,0 +1,7 @@
+---
+- name: wait
+  hosts: localhost
+  tasks:
+    ansible.builtin.wait_for_connection:
+      timeout: 900
+    

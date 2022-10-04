@@ -3,4 +3,4 @@
   hosts: all
   gather_facts: false
   tasks:
-  - meta: refresh inventory
+  - meta: refresh_inventory

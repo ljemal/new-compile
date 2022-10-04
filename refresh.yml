@@ -1,0 +1,6 @@
+---
+- name: refresh inventory
+  hosts: all
+  gather_facts: false
+  roles:
+    - ljemal.demos.refresh

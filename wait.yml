@@ -1,6 +1,7 @@
 ---
 - name: wait
   hosts: all
+  gather_facts: false
   tasks:
   - name: waiting for server to be alive
     ansible.builtin.wait_for_connection:

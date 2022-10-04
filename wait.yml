@@ -5,4 +5,3 @@
   - name: waiting for server to be alive
     ansible.builtin.wait_for_connection:
       timeout: 300
-    delegate_to: localhost

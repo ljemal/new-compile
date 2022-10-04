@@ -11,5 +11,9 @@
     instance_name: instance
   roles:
     - ljemal.demos.createec
+  post_tasks:
+    - name: Wait for system to become reachable over SSH
+      ansible.builtin.wait_for_connection:
+        timeout: 900
      
        

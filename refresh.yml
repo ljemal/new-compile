@@ -1,6 +1,0 @@
----
-- name: refresh
-  hosts: all
-  gather_facts: false
-  tasks:
-  - meta: refresh_inventory

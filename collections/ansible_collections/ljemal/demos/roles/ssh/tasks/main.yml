@@ -1,0 +1,4 @@
+---
+- name: Wait for system to become reachable over WinRM
+  ansible.builtin.wait_for_connection:
+    timeout: 900

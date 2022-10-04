@@ -6,18 +6,3 @@
     ansible.builtin.wait_for_connection:
       timeout: 300
     delegate_to: localhost
-ait_for:
-8
-      state: started
-9
-      port: 22
-10
-      host: instance
-11
-      delay: 10
-12
-      timeout: 500
-13
-      connect_timeout: 300
-14
-      search_regex: OpenSSH

@@ -3,12 +3,6 @@
   gather_facts: False
   vars:
     region: us-east-2
-    instance_name: instance
-  tasks:
-    - name: Ensure instance is absent
-      amazon.aws.ec2_instance:
-        region: "{{ region }}"
-        state: absent
-        filters:
-          tag:Name: "{{ instance_name }}"
-      register: _aws_instance_destroy
+    instance_name: instance    
+  roles:
+    - ljemal.demos.deleteec

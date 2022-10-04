@@ -5,23 +5,11 @@
   vars:
     keypair: sept
     instance_type: t2.micro
-    security_group: default
+    security_group: launch-wizard-2
     image: ami-092b43193629811af
     region: us-east-2
     instance_name: instance
-  tasks:
-    - name: Launch instance
-      amazon.aws.ec2_instance:
-         key_name: "{{ keypair }}"
-         security_group: "{{ security_group }}"
-         instance_type: "{{ instance_type }}"
-         image_id: "{{ image }}"
-         wait: true
-         region: "{{ region }}"
-         vpc_subnet_id: subnet-086194c049813830f
-         network:
-           assign_public_ip: yes
-         name: "{{ instance_name }}"
-      register: ec2
+  roles:
+    - ljemal.demos.createec
      
        

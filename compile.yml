@@ -12,6 +12,7 @@
     object: compile.jar
     bucket_source: "{{ jar['content'] }}"
     region: 'us-east-2'
+  
   roles:
     - ljemal.demos.install_git
     - ljemal.demos.clonerepo

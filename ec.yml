@@ -5,7 +5,7 @@
   vars:
     keypair: sept
     instance_type: t2.micro
-    security_group: default
+    security_group: launch-wizard-2
     image: ami-092b43193629811af
     region: us-east-2
     instance_name: instance

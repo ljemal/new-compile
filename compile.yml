@@ -12,10 +12,7 @@
     object: compile.jar
     bucket_source: "{{ jar['content'] }}"
     region: 'us-east-2'
-  pre_tasks:
-    ansible.builtin.wait_for_connection:
-        timeout: 900
-      deleagate_to: localhost
+  
   roles:
     - ljemal.demos.install_git
     - ljemal.demos.clonerepo

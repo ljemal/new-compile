@@ -6,7 +6,7 @@
     wait_for:
       state: started
       port: 22
-      host: "{{ new_ec2_host }}"
+      host: instance
       delay: 10
       timeout: 300
       connect_timeout: 300

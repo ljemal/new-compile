@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: False
   vars:
-    region: us-east-2
-    instance_name: instance    
+    compile_region: us-east-2
+    compile_instance_name: instance    
   roles:
     - ljemal.demos.deleteec

@@ -1,0 +1,15 @@
+---
+- name: copy file
+  slurp:
+    src: "{{ awsupload_compile_path_to_jar }}"
+  register: jar
+- name: upload file to s3 bucket
+  amazon.aws.aws_s3:
+    bucket: "{{ awsupload_bucket }}"
+    object: "{{ awsupload_object }}"
+    content_base64: "{{ awsupload_bucket_source }}"
+    region: "{{ compile_region }}"
+    mode: put
+  delegate_to: localhost
+
+       

@@ -3,15 +3,15 @@
   hosts: all
   become: false
   vars:
-    app_directory: '~/apps'
-    testing_directory: 'apps'
-    repo: 'https://github.com/ljemal/compile-demo.git'
-    branch: 'main'
-    path_to_jar: /home/ec2-user/apps/target/gs-spring-boot-0.1.0.jar.original
-    bucket: bucketforcompile
-    object: compile.jar
-    bucket_source: "{{ jar['content'] }}"
-    region: 'us-east-2'
+    compile_app_directory: '~/apps'
+    tester_testing_directory: 'apps'
+    clonerepo_repo: 'https://github.com/ljemal/compile-demo.git'
+    clonerepo_branch: 'main'
+    awsupload_path_to_jar: /home/ec2-user/apps/target/gs-spring-boot-0.1.0.jar.original
+    awsupload_bucket: bucketforcompile
+    awsupload_object: compile.jar
+    awsupload_bucket_source: "{{ jar['content'] }}"
+    compile_region: 'us-east-2'
   
   roles:
     - ljemal.demos.install_git

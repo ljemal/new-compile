@@ -3,12 +3,12 @@
   hosts: localhost
   gather_facts: False
   vars:
-    keypair: sept
-    instance_type: t2.micro
-    security_group: launch-wizard-2
-    image: ami-092b43193629811af
-    region: us-east-2
-    instance_name: instance
+    ceateec_keypair: sept
+    createec_instance_type: t2.micro
+    createec_security_group: launch-wizard-2
+    createec_image: ami-092b43193629811af
+    compile_region: us-east-2
+    compile_instance_name: instance
   roles:
     - ljemal.demos.createec
      

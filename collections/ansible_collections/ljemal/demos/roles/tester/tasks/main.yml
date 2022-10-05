@@ -1,4 +1,0 @@
----
-- name: test jar file
-  command: mvn test -f "{{ testing_directory }}"
-      

@@ -1,3 +1,7 @@
 ---
 - name: install first artifact
   command: mvn package -f "{{ compile_app_directory }}"
+  register: result
+- name: debug
+  debug: 
+    var: result

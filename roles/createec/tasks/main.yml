@@ -11,5 +11,4 @@
     network:
       assign_public_ip: true
     name: "{{ compile_instance_name }}"
-    count: "{{ ec2_instance_count }}"
   register: ec2
